@@ -1,3 +1,4 @@
+import math
 #menu
 def calculate():
     operação = input('''Escolha sua operação matemática 
@@ -39,22 +40,17 @@ def calculate():
           else:
                print("{} / {} = ".format(n1, n2))
                print(n1 / n2)
-    #sem opção
-    else:
-         print("Escolha incorreta, por favor reinicie")
-         calculate()
+ 
     again()
-    return
+
    #Repetição da conta
 def again():
     print("Você quer repetir sua conta?")
-    calc_again = input('''Você quer calcular novamente?
-                        Escolha S para sim ou N para não ''')
-    if calc_again.upper() == "S":
+    calc_again = input('''Você quer calcular novamente?Escolha S para sim ou N para não ''').upper()
+    if calc_again == "S":
         calculate()
-    elif calc_again.upper() == "N":
+    elif calc_again == "N":
         print("Obrigado por ter vindo")
-        return 
     else:
         print("Opção errada!")
         again()
